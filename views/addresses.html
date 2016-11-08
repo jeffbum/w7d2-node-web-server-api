@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Addresses</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body class="container">
+  <h1>Addresses</h1>
+  <table style="width:100%">
+    <tr>
+        <th>id</th>
+      <th>user_id</th>
+      <th>street</th>
+      <th>city</th>
+      <th>state</th>
+      <th>zip</th>
+
+    </tr>
+    {% for address in addresses %}
+    <tr>
+        <td>{{ address.id }}</td>
+      <td>{{ address.user_id }}</td>
+      <td>{{ address.street }}</td>
+      <td>{{ address.city }}</td>
+      <td>{{ address.state }}</td>
+      <td>{{ address.zip }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

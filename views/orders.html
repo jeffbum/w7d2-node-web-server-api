@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Orders</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body class="container">
+  <h1>Orders</h1>
+  <table style="width:100%">
+    <tr>
+      <th>id</th>
+      <th>user ID</th>
+      <th>item Id</th>
+      <th>quantity</th>
+      <th>created at</th>
+
+    </tr>
+    {% for order in orders %}
+    <tr>
+      <td>{{ order.id }}</td>
+      <td>{{ order.user_id }}</td>
+      <td>{{ order.item_id }}</td>
+      <td>{{ order.quantity }}</td>
+      <td>{{ order.created_at }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
